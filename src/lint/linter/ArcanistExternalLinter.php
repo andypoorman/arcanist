@@ -410,7 +410,7 @@ abstract class ArcanistExternalLinter extends ArcanistFutureLinter {
     return csprintf('%s', $path);
   }
 
-  final protected function buildFutures(array $paths) {
+  protected function buildFutures(array $paths) {
     $executable = $this->getExecutableCommand();
 
     $bin = csprintf('%C %Ls', $executable, $this->getCommandFlags());
